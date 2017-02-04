@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "BSMeter",
+  "description": "Bullshit meter chrome extension",
+  "version": "0.0.0.1",
+  "background": {
+    "scripts": [
+      "event.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "BullshitMeter",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": [],
+      "js": ["content.js"]
+    }
+  ]
+}
